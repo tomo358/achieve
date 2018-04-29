@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+    <body>
+      <header>
+        <ul>
+          <li><a href="http://localhost:3000/">ホーム</a></li>
+          <li><a href="http://localhost:3000/blogs/new">投稿</a></li>
+          <li><a href="http://localhost:3000/blogs/">一覧</a></li>
+        </ul>
+      </header>
+
+      <%= yield %>
+
+      <footer>
+        <p>DIVE INTO CODE</p>
+        <p>2018年03期　伊藤 大輝</p>
+      </footer>
+    </body>
+
+</html>

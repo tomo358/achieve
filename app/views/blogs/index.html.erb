@@ -1,0 +1,24 @@
+<div class="container">
+
+  <h1 class="index">内容一覧</h1>
+
+  <p class="notice"><%= notice %></p>
+
+  <div class="row">
+
+        <% @blogs.each do |blog| %>
+          <div class="col-md-6 col-md-6 col-sm-12">
+                <p class="content"><%= blog.content %></p>
+              <tr class="btn-group">
+                  <td><button class ="btn-lg btn-primary"><%= link_to '詳細', blog_path(blog.id) %></button></td>
+                  <td><button class ="btn-lg btn-success"><%= link_to '編集', edit_blog_path(blog.id) %></button></td>
+                  <td><button class ="btn-lg btn-danger"><%= link_to '削除', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button></td>
+              </tr>
+              <hr>
+          </div>
+        <% end %>
+
+  <!-- <%= link_to '新しく投稿する', new_blog_path %> -->
+
+  </div>
+</div>
