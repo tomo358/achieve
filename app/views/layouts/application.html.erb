@@ -11,18 +11,18 @@
     <body>
       <header>
         <ul>
-          <li><a href="http://localhost:3000/">ホーム</a></li>
-          <li><a href="http://localhost:3000/blogs/new">投稿</a></li>
-          <li><a href="http://localhost:3000/blogs/">一覧</a></li>
+          <li><%= link_to 'ホーム', root_path %></li>
+          <li><%= link_to '投稿', new_blog_path %></li>
+          <li><%= link_to '一覧', blogs_path %></li>
         </ul>
       </header>
 
       <%= yield %>
 
       <footer>
-        <p>DIVE INTO CODE</p>
-        <p>2018年03期　伊藤 大輝</p>
+        <p>18年03期　伊藤大輝</p>
       </footer>
     </body>
+
 
 </html>

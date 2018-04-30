@@ -50,6 +50,13 @@ class BlogsController < ApplicationController
     render :new if @blog.invalid?
   end
 
+  def tops
+    redirect_to root_path
+    redirect_to blogs_path
+    redirect_to new_blog_path
+  end
+
+
   private
   def blog_params
     params.require(:blog).permit(:content)
