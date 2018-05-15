@@ -2,6 +2,8 @@
 
 <p>メールアドレス: <%= @user.email %></p>
 
+<h2>お気に入り一覧</h2>
+
 <% @favorites.each do |favorites_blog| %>
   <div class="col-md-6 col-md-6 col-sm-12">
     <p class="content"><%= favorites_blog.blog.content %></p>
