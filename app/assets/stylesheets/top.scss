@@ -1,3 +1,14 @@
+html {
+  width:100%;
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  text-align: center;
+  margin: 0px;
+}
+
 header {
   width: 100%;
   position: relative;
@@ -26,7 +37,6 @@ header li {
 
 .chat {
   padding-top: 10px;
-  padding-left: 150px;
   padding-right: 10px;
 }
 
@@ -54,26 +64,27 @@ footer p {
   font-size: 1.2em;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  text-align: center;
-}
-
 a{
   color: #fff
 }
 
-.tops .pp {
+.tops .pp1 {
   text-align: left;
   color: #F4F5F7;
   font-weight: bold;
   font-size: 7vw;
   font-family :Quicksand, sans-serif;
-  padding-top: 50px;
+  padding-top: 40px;
+}
+
+.tops .pp2 {
+  text-align: left;
+  color: #F4F5F7;
+  font-weight: bold;
+  font-size: 7vw;
+  font-family :Quicksand, sans-serif;
+  padding-top: 80px;
+  padding-bottom: 100px
 }
 
 .tops .word {
@@ -102,7 +113,7 @@ a{
   font-size: 4vw;
   color: #F4F5F7;
   text-align: left;
-  padding-top: 20px;
+  padding-top: 0px;
 }
 
 ul {
@@ -158,6 +169,12 @@ div.blog_title {
   padding-bottom: 50px;
 }
 
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+
 button, input, select, textarea {
     font-family: inherit;
     font-size: 20px;
@@ -178,4 +195,11 @@ label {
 div.col-md-12 {
   margin-right: auto;
   margin-left : auto;
+}
+
+* {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
