@@ -10,20 +10,24 @@
 
       <% if blog.user == current_user %>
         <div class="col-md-6 col-md-6 col-sm-12">
-        <p class = "index_image">
-           <%= image_tag blog.image %>
-        </p>
-          <p class="content"><%= blog.content %></p>
+
+          <p class="content">タイトル:<%= blog.title %></p>
+          <hr>
+          <p class="content">内容:<%= blog.content %></p>
             <tr class="btn-group">
               <td><button class ="btn-lg btn-primary"><%= link_to '詳細', blog_path(blog.id) %></button></td>
               <td><button class ="btn-lg btn-success"><%= link_to '編集', edit_blog_path(blog.id) %></button></td>
               <td><button class ="btn-lg btn-danger"><%= link_to '削除', blog_path(blog.id), method: :delete ,data: { confirm: '本当に削除していいですか？' } %></button></td>
             </tr>
-            <hr>
+            <p></p>
+            <p class = "index_image">
+               <%= image_tag blog.image %>
+            </p>
         </div>
 
         <% else %>
           <div class="col-md-6 col-md-6 col-sm-12">
+            <p class="content"><%= blog.title %></p>
             <p class="content"><%= blog.content %></p>
               <tr class="btn-group">
                 <td><button class ="btn-lg btn-primary"><%= link_to '詳細', blog_path(blog.id) %></button></td>

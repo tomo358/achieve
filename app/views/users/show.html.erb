@@ -12,7 +12,9 @@
 
   <% @favorites.each do |favorites_blog| %>
     <div class="col-md-6 col-md-6 col-sm-12">
-      <p class="content"><%= favorites_blog.blog.content %></p>
+      <p class="content">タイトル：<%= favorites_blog.blog.title %></p>
+      <hr>
+      <p class="content">内容：<%= favorites_blog.blog.content %></p>
     </div>
   <% end %>
 </div>
