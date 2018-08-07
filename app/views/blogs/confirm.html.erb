@@ -6,10 +6,11 @@
 
   <p>タイトル:<%= @blog.title %></p>
   <p>本文:<%= @blog.content %></p>
-  <p class = "confirm_img">
-    <%= image_tag(@blog.image.url) %>
-    <%= hidden_field_tag :"cache[image]",@blog.image.cache_name %>
-  </p>
+
+    <p class = "confirm_img">
+      <%= image_tag(@blog.image) %>
+      <%= hidden_field_tag :"cache[image]",@blog.image.cache_name %>
+    </p>
   <%= form.submit  "登録する" %>
 <% end %>
 

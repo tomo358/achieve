@@ -1,8 +1,5 @@
 class BlogsController < ApplicationController
-
   before_action :logged_in_user, only: [:new, :edit, :show, :destroy]
-
-  # before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def index
     @blogs = Blog.all
@@ -25,8 +22,7 @@ class BlogsController < ApplicationController
   def create
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
-    @blog.image.retrieve_from_cache! params[:cache][:image]
-
+    @blog.image.retrieve_from_cache! params[:cache][:image] if params[:cache][:image].present?
     if @blog.save
       NoticeMailer.notice_mail(@blog).deliver
       redirect_to blogs_path, notice: "ブログを作成しました!"
@@ -57,7 +53,7 @@ class BlogsController < ApplicationController
   def confirm
     @blog = Blog.new(blog_params)
     @blog.user_id = current_user.id
-    render :new if @blog.invalid?
+    render :new if @insta.invalid?
   end
 
   def tops
@@ -65,7 +61,6 @@ class BlogsController < ApplicationController
     redirect_to blogs_path
     redirect_to new_blog_path
   end
-
 
   private
   def blog_params
